@@ -5,7 +5,7 @@ import 'package:get/get.dart';
 import 'package:sizer/sizer.dart';
 
 import 'app/routes/app_pages.dart';
-
+//done
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initGetServices();
