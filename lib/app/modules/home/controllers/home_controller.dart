@@ -41,8 +41,6 @@ class HomeController extends GetxController {
     isLoading.value = false;
   }
 
-
-
   void updateCount(int index, int catIndex, int count, int price) {
     isLoading.value = true;
     catModel[index].cat![catIndex].count = count;
@@ -112,6 +110,8 @@ class HomeController extends GetxController {
 
   void saveOrder() {
     if (tempItem.isEmpty) {
+      Get.snackbar("Please select", "at least one item");
+    } else if (mPrice == 0) {
       Get.snackbar("Please select", "at least one item");
     } else {
       isLoading(true);
